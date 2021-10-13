@@ -2,10 +2,12 @@
   "full_name": "Juan Olvera",
   "project_name": "Project folder boilerplate",
   "project_slug": "{{ cookiecutter.project_name.lower()|replace(' ', '_')|replace('-', '_')|replace('.', '_')|trim() }}",
+  "project_slug_timestamped": "{% now 'utc', '%Y-%m-%d' %}-{{ cookiecutter.project_slug }}",
   "project_name_dashed": "{{ cookiecutter.project_slug|replace('_', '-') }}",
   "description": "An opinionated project folder structure",
   "author_name": "Juan Olvera",
   "author_email": "juan@jolvera.dev",
   "domain_name": "jolvera.dev",
-  "version": "0.1.0"
+  "version": "0.1.0",
+  "_extensions": ["jinja2_time.TimeExtension"]
 }
